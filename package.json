@@ -11,5 +11,8 @@
     "url": "github.com"
   },
   "author": "Joschka & Calina",
-  "license": "Copyright (c) 2015 Harvest"
+  "license": "Copyright (c) 2015 Harvest",
+  "dependencies": {
+    "node-trello": "1.1.2"
+  }
 }
