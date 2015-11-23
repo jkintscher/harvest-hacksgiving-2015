@@ -1,0 +1,15 @@
+{
+  "name": "hacksgiving-2015",
+  "version": "1.0.0",
+  "description": "Never argue about lunch again.",
+  "main": "index.js",
+  "scripts": {
+    "test": "testem"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com"
+  },
+  "author": "Joschka & Calina",
+  "license": "Copyright (c) 2015 Harvest"
+}
