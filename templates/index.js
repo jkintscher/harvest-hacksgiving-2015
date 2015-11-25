@@ -15,7 +15,7 @@ module.exports = function(card) {
 
         <p>${card.description}</p>
 
-        <h2>Tags</h2>
+        <h2>Labels</h2>
         <ul>
           <li>${card.labels.join('</li><li>')}</li>
         </ul>
