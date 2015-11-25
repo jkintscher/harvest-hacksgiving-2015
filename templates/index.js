@@ -1,4 +1,4 @@
-module.exports = function(card) {
+module.exports = function(card, is_team_lunch) {
   return `
     <!doctype html>
     <html>
@@ -63,7 +63,10 @@ module.exports = function(card) {
         </style>
       </head>
       <body>
-        <h1>Today’s lunch is at <em>${card.name}</em></h1>
+        <h1>
+          Today’s ${is_team_lunch ? 'team ' : ''}lunch is at
+          <em>${card.name}</em>
+        </h1>
 
         <article class="description">${card.description}</article>
 
