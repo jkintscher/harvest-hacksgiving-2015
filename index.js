@@ -18,6 +18,11 @@ const server = http.createServer((req, res) => {
     res.end();
   }
 
+  if (!card.id) {
+    res.end();
+    return;
+  }
+
   res.end(require('./templates/index')(card));
 });
 
