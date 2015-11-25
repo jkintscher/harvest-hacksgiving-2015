@@ -3,12 +3,12 @@
 const http = require('http');
 const BOARD_ID = '56535fa5c071b19aab2ad5b6';
 
+const IS_TEAM_LUNCH = (new Date().getDay() === 3);
 let card = {};
-let is_team_lunch = (new Date().getDay() === 3);
 
 // Randomly select today’s lunch card
 require('./lib/board').load(BOARD_ID, (board) => {
-  if (is_team_lunch) {
+  if (IS_TEAM_LUNCH) {
     board.getRandomTeamLunchCard((data) => card = data)
   } else {
     board.getRandomCard((data) => card = data)
@@ -28,7 +28,7 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  res.end(require('./templates/index')(card, is_team_lunch));
+  res.end(require('./templates/index')(card, IS_TEAM_LUNCH));
 });
 
 server.listen(8080);
